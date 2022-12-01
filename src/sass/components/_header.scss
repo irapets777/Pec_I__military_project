@@ -1,4 +1,86 @@
+$var1: #FFFFFF;
+$var2: #FFD234;
+$var3: #81ad06;
 .header{
-    background-color: red;
-    color: #fff;
+    background-color: #23280F;
+    height: auto;
+    &__nav
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    &__link {
+        color: $var1;
+        font-weight: 600;
+        font-size: 18px;
+        &:hover {
+            color: $var2;
+            transition: 0.4s;
+        }
+    }
+    &__burger {
+        position: relative;
+    
+        span {
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+        }
+    
+        :first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        :last-child {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        :nth-child(2) {
+            position: absolute;
+            left: 0;
+            top: calc(50% - 1px);
+        }
+        &.active {
+            :first-child {
+                transform: rotate(45deg);
+                top: 57%;
+            }
+            :last-child {
+                transform: rotate(-45deg);
+                top: 53%;
+            }
+            :nth-child(2) {
+                display: none;
+            }
+        }
+}
+}
+.nav__item {
+    padding-left: 30px;
+    @media screen and (max-width:992px){
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0px 10px 20px;
+    }
+}
+
+.header__btn {
+    padding: 10px 30px;
+    background-color: $var2;
+    border-radius: 5px;
+    color: $var1;
+    font-weight: 600;
+    font-size: 18px;
+    white-space: nowrap;
+    &:hover {
+        color: $var1;
+        background-color: $var3;
+        transition: 0.4s;
+    }
+    @media screen and (max-width:992px){
+        padding: 5px 15px;
+        font-size: 16px;
+    }
 }
