@@ -20,11 +20,17 @@ $var3: #81ad06;
     }
     &__burger {
         position: relative;
+        top: 0;
+        left: -40px;
     
         span {
-            width: 20px;
-            height: 2px;
-            background-color: #fff;
+            width: 40px;
+            height: 4px;
+            border-radius: 6px;
+            background: rgb(146, 163, 35);
+            background: linear-gradient(90deg, rgb(200, 219, 71) 0%, rgba(89,99,35,1) 35%, rgba(217,211,17,1) 100%);
+            margin-top: 5px;
+
         }
     
         :first-child {
@@ -40,7 +46,7 @@ $var3: #81ad06;
         :nth-child(2) {
             position: absolute;
             left: 0;
-            top: calc(50% - 1px);
+            top: calc(50%);
         }
         &.active {
             :first-child {
@@ -60,9 +66,10 @@ $var3: #81ad06;
 .nav__item {
     padding-left: 30px;
     @media screen and (max-width:992px){
-        display: flex;
-        flex-wrap: wrap;
-        padding: 10px 0px 10px 20px;
+        display: none;
+        // display: flex;
+        // flex-wrap: wrap;
+        // padding: 10px 0px 10px 20px;
     }
 }
 

@@ -8,3 +8,15 @@ let slider = $(document).ready(function () {
   });
 });
 
+$('.header__burger').on('click', function(){
+  $('.header__burger').toggleClass('active');
+  // $('.mobile__nav').toggleClass('active');
+})
+
+$('.mobile__nav a').on('click', function(){
+  $('.header__burger').toggleClass('active');
+  $('.mobile__nav').toggleClass('active');
+})
+
+
+
