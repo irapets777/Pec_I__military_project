@@ -18,76 +18,36 @@ $var3: #81ad06;
             transition: 0.4s;
         }
     }
-    &__burger {
-        position: relative;
-        top: 0;
-        left: -40px;
-    
-        span {
-            width: 40px;
-            height: 4px;
-            border-radius: 6px;
-            background: rgb(146, 163, 35);
-            background: linear-gradient(90deg, rgb(200, 219, 71) 0%, rgba(89,99,35,1) 35%, rgba(217,211,17,1) 100%);
-            margin-top: 5px;
 
+    &__item{
+        padding: 10px;
+        @media screen and(max-width:768px){
+            display: none;
         }
-    
-        :first-child {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        :last-child {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-        }
-        :nth-child(2) {
-            position: absolute;
-            left: 0;
-            top: calc(50%);
-        }
-        &.active {
-            :first-child {
-                transform: rotate(45deg);
-                top: 57%;
-            }
-            :last-child {
-                transform: rotate(-45deg);
-                top: 53%;
-            }
-            :nth-child(2) {
-                display: none;
-            }
-        }
-}
-}
-.nav__item {
-    padding-left: 30px;
-    @media screen and (max-width:992px){
-        display: none;
-        // display: flex;
-        // flex-wrap: wrap;
-        // padding: 10px 0px 10px 20px;
     }
-}
-
-.header__btn {
-    padding: 10px 30px;
-    background-color: $var2;
-    border-radius: 5px;
-    color: $var1;
-    font-weight: 600;
-    font-size: 18px;
-    white-space: nowrap;
-    &:hover {
+    .header__btn {
+        padding: 10px 30px;
+        background-color: $var2;
+        border-radius: 5px;
         color: $var1;
-        background-color: $var3;
-        transition: 0.4s;
-    }
-    @media screen and (max-width:992px){
-        padding: 5px 15px;
-        font-size: 16px;
+        font-weight: 600;
+        font-size: 18px;
+        white-space: nowrap;
+        &:hover {
+            color: $var1;
+            background-color: $var3;
+            transition: 0.4s;
+        }
+        @media screen and (max-width:1200px){
+           display: none;
+        }
     }
 }
+
+
+
+
+
+
+
+
